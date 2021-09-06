@@ -54,11 +54,10 @@ The 16 months worth of data live in 16 different csv files. All files have the s
 - The datetime columns should be broken up into two columns: *date* and *time* for each datetime field (i.e. start and end)
 - We should convert the *member_casual* field into a boolean *1* or *0* for member status (1 for Member, 0 for casual)
 - If we use a spatial solution when implementing our RDMS, we need to pay special attention to how our lat and long are formatted
-- The csvs are too large to clean in Excel (see changelog)
 ### Data Constraints
 - Data has been removed of personally identifying information. Determining certain insights (i.e., number of trips per rider) is not possible
 ## Tools
-- ***Excel***: for basic inspection of fields; viewing overall structure
+- ***Excel***: for basic cleaning, and basic transformations
 - ***PostgreSQL (with PostGIS)***: for additional cleaning, data transformations, further EDA, geospaital analysis
 - ***Tableau Public***: for data visualizations
 ### Potential Tools
