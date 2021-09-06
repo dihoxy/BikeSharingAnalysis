@@ -13,4 +13,4 @@
 - How can Cyclistic use digital media to influence casual riders to become members?
 
 ## Data
-The 16 months worth of data live in 16 different csv files. All files have the same columns: ***ride_id, rideable_type, started_at, ended at, start_station_name, start_station_id, end_station_name, end_station_id, start_lat, start_lng, end_lat, end_lng, member_casual***
+The 16 months worth of data live in 16 different csv files. All files have the same columns: ***ride_id(string), rideable_type(category), started_at(timestamp m/dd/YYYY HH:MM), ended_at(timestamp m/dd/YYYY HH:MM), start_station_name, start_station_id, end_station_name, end_station_id, start_lat, start_lng, end_lat, end_lng, member_casual***
