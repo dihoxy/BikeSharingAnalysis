@@ -67,3 +67,6 @@ The 16 months worth of data live in 16 different csv files. All files have the s
 - I am using Pycharm professional that is connected to PostgreSQL. I can use Pycharm's built in console to write and edit queries
 - I will use Tableau Public to create visualizations from the processed csv
 - I might use Rstudio for additional visualizations
+
+## Processing
+*Note: Additional details on cleaning and processing the data can be found in the changelog*
