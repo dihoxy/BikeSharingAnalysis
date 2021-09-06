@@ -23,6 +23,9 @@
 - **Cyclistic Executive Team***
 - **Cyclistic customers**
 - **The City of Chicago**
+### How will this data help solve our problem?
+The data is current (last dataset was for July 2021), comprehensive (covers trip durartion, start and stop distance and member status), and 
+
 ## Data
 The 16 months worth of data live in 16 different csv files. All files have the same columns: ***ride_id(character), rideable_type(category), started_at(timestamp m/dd/YYYY HH:MM), ended_at(timestamp m/dd/YYYY HH:MM), start_station_name(variable character), start_station_id(int), end_station_name(variable character), end_station_id(int), start_lat(geo), start_lng(geo), end_lat(geo), end_lng(geo), member_casual(category)***
 ### Sources of Data
@@ -36,4 +39,5 @@ The 16 months worth of data live in 16 different csv files. All files have the s
 ### Data Issues
 - The datetime columns should be broken up into two columns: *date* and *time* for each datetime field (i.e. start and end)
 - We should convert the *member_casual* field into a boolean *1* or *0* for member status (1 for Member, 0 for casual)
+- If we use a spatial solution when implementing our RDMS, we need to pay special attention to how our lat and long are formatted
 
