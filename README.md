@@ -5,12 +5,35 @@
 ---
 # Google Data Analyitics Capstone Project
 
+(*note - cyclistic is a fictional company*)
 ## Business Task 
 *Analyze 16 months worth of bike sharing data to inform marketing strategy on the prospect of converting current "casual" riders into annual members over targeting new customers*
 ### Project Questions
-- In order to do this, we need to understand how annual members differ from casual riders
-- Why would casual riders buy Cyclistic annual memberships?
-- How can Cyclistic use digital media to influence casual riders to become members?
-
+- How do annual members differ from casual riders?
+- What similarities are there between the two groups?
+- What differences are there?
+#### Problem Type
+- Discovering Conncections
+- Categorizing things
+- Finding Patterns
+### Who are our key stakeholders and characters?
+- **Cyclistic**: A bike-share program with 5,800 bicycles and 600 docking stations
+- **Lily Moreno**: Director of Marketing
+- **Cyclistic Marketing Analytics Team**: Current team
+- **Cyclistic Executive Team***
+- **Cyclistic customers**
+- **The City of Chicago**
 ## Data
-The 16 months worth of data live in 16 different csv files. All files have the same columns: ***ride_id(string), rideable_type(category), started_at(timestamp m/dd/YYYY HH:MM), ended_at(timestamp m/dd/YYYY HH:MM), start_station_name, start_station_id, end_station_name, end_station_id, start_lat, start_lng, end_lat, end_lng, member_casual***
+The 16 months worth of data live in 16 different csv files. All files have the same columns: ***ride_id(character), rideable_type(category), started_at(timestamp m/dd/YYYY HH:MM), ended_at(timestamp m/dd/YYYY HH:MM), start_station_name(variable character), start_station_id(int), end_station_name(variable character), end_station_id(int), start_lat(geo), start_lng(geo), end_lat(geo), end_lng(geo), member_casual(category)***
+### Sources of Data
+- Accessed via Coursera Google Capstone Case Study
+- License provided can be found [here](https://www.divvybikes.com/data-license-agreement)
+### Location of Data
+- Located in a repository on GitHub; on local pc, stored in the "DataAnalysis" directory in the "Bike Sharing" subfolder
+### Data Structure
+- The data is organized chronologically from 04/2020 to 07/2020
+- 13 fields (columns)
+### Data Issues
+- The datetime columns should be broken up into two columns: *date* and *time* for each datetime field (i.e. start and end)
+- We should convert the *member_casual* field into a boolean *1* or *0* for member status (1 for Member, 0 for casual)
+
