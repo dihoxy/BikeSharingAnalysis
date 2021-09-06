@@ -27,7 +27,21 @@
 The data is current (last dataset was for July 2021), comprehensive (covers trip durartion, start and stop distance and member status), and 
 
 ## Data
-The 16 months worth of data live in 16 different csv files. All files have the same columns: ***ride_id(character), rideable_type(category), started_at(timestamp m/dd/YYYY HH:MM), ended_at(timestamp m/dd/YYYY HH:MM), start_station_name(variable character), start_station_id(int), end_station_name(variable character), end_station_id(int), start_lat(geo), start_lng(geo), end_lat(geo), end_lng(geo), member_casual(category)***
+The 16 months worth of data live in 16 different csv files. All files have the same columns: 
+- ride_id(character): the id assigned to that trip
+- rideable_type(category)
+- started_at(timestamp m/dd/YYYY HH:MM): start of trip
+- ended_at(timestamp m/dd/YYYY HH:MM): end of trip
+- start_station_name(variable character): name of start station
+- start_station_id(int): start station id
+- end_station_name(variable character): name of end station
+- end_station_id(int): end station id
+- start_lat(geo): latitude of start location
+- start_lng(geo): longitude of start location
+- end_lat(geo): end station latitude
+- end_lng(geo): end station longitude
+- member_casual(category): member or casual rider
+
 ### Sources of Data
 - Accessed via Coursera Google Capstone Case Study
 - License provided can be found [here](https://www.divvybikes.com/data-license-agreement)
