@@ -16,4 +16,4 @@
 - Deleted all records from database due to errors while importing csvs (*Conversion error due to smallint datatype too small to handle start and end ids)*
 - Changed field "ride_id" to varchar(20), and set start and end ids to type *integer*
 - Changed Pycharm import settings to "first row is header"
-- Starting in 12-2020, start and end ids contain a string of numbers and characters. Changed start and end id fields to type *text*
+- Starting in 12-2020, start and end ids contain a string of numbers and characters. ***Changed all varchar types to type "text"***
