@@ -14,5 +14,5 @@
 ***2021-09-07***
 - Uploaded 06-2020, 07-2020, 08-2020
 - Deleted all records from database due to errors while importing csvs (*Conversion errors due to ride_id being less than 16 chars and field datatype being set to character(16)*
-- Changed field "ride_id" to varchar(20)
+- Changed field "ride_id" to varchar(20))
 - Changed Pycharm import settings to "first row is header"
