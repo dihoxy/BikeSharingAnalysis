@@ -19,3 +19,11 @@ CREATE INDEX CONCURRENTLY end_station_id_idx
 	ON public.bike_trip_data USING btree
 	(end_station_id ASC NULLS LAST)
 ;
+
+-- Since we are likely to use the start and end stations as filters for a lot
+-- of our queries, we will create an index to improve performance
+CREATE INDEX start_station_name_idx
+	ON public.bike_trip_data (start_station_name);
+
+CREATE INDEX end_station_name_idx
+	ON public.bike_trip_data (end_station_name);
