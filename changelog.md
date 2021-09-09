@@ -21,4 +21,4 @@
 ***2021-09-09***
 - Changed all character fields to type "text"
 - Changed start and end station ids to type "text" (since some datasets contain characters in their ids)
-- 
+- 202012 file has 209 unique pk violations (are pks being recycled?)
