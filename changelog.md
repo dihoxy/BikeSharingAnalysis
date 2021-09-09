@@ -17,3 +17,8 @@
 - Changed field "ride_id" to varchar(20), and set start and end ids to type *integer*
 - Changed Pycharm import settings to "first row is header"
 - Starting in 12-2020, start and end ids contain a string of numbers and
+----
+***2021-09-09***
+- Changed all character fields to type "text"
+- Changed start and end station ids to type "text" (since some datasets contain characters in their ids)
+- 
