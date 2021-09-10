@@ -36,3 +36,6 @@
 - No Null Values in start lat and lng
 - 6,904 null values for end lat and lng
 - No null values for member/casual
+
+--- New Files ---
+- Created jupyter notebook for Python analysis
