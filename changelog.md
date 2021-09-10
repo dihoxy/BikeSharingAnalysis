@@ -21,4 +21,8 @@
 ***2021-09-09***
 - Changed all character fields to type "text"
 - Changed start and end station ids to type "text" (since some datasets contain characters in their ids)
-- 202012 file has 209 unique pk violations (are pks being recycled?)
+- 202012 file has 209 unique pk violations
+----
+***2021-09-10***
+- Finished importing all csvs into database
+- Discovered 20k plus rows in which no location name for start and end stations are given; also discovered that these are unique to the rideable_type 'electric bike'
