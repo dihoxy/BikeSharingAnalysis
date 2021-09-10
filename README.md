@@ -50,6 +50,7 @@ The 16 months worth of data live in 16 different csv files. All files have the s
 ### Data Structure
 - The data is organized chronologically from 04/2020 to 07/2020
 - 13 fields (columns)
+- Only one table 
 ### Data Issues
 - The datetime columns should be broken up into two columns: *date* and *time* for each datetime field (i.e. start and end)
 - We should convert the *member_casual* field into a boolean *1* or *0* for member status (1 for Member, 0 for casual)
@@ -57,8 +58,8 @@ The 16 months worth of data live in 16 different csv files. All files have the s
 ### Data Constraints
 - Data has been removed of personally identifying information. Determining certain insights (i.e., number of trips per rider) is not possible
 ## Tools
-- ***Excel***: for basic cleaning, and basic transformations
-- ***PostgreSQL (with PostGIS)***: for additional cleaning, data transformations, further EDA, geospaital analysis
+- ***Excel***: for basic cleaning, and inspection of the datasets
+- ***PostgreSQL***: for additional cleaning, data transformations, further EDA
 - ***Tableau Public***: for data visualizations
 ### Potential Tools
 - ***Python***: Using Pandas for data-wrangling
@@ -70,3 +71,4 @@ The 16 months worth of data live in 16 different csv files. All files have the s
 
 ## Processing
 *Note: Additional details on cleaning and processing the data can be found in the [changelog](https://github.com/dihoxy/BikeSharingAnalysis/blob/master/changelog.md)*
+
