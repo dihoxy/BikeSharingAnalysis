@@ -32,3 +32,8 @@ SELECT start_station_name, rideable_type, count(ride_id) AS num_rides_starting_a
 FROM public.bike_trip_data
 GROUP BY start_station_name, rideable_type
 ORDER BY start_station_name;
+
+-- Syntax that queried the null count for each field
+SELECT count(*) AS num_null_value
+FROM public.bike_trip_data
+WHERE bike_trip_data.[field_name] IS NULL;
