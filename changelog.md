@@ -29,7 +29,6 @@
 
 --- Inspecting the Dataset ---
 - No Null Values in start and end datetimes
-- Discovered 300k+ rows in which no location name for start and end stations are given; also discovered that these are unique to the rideable_type 'electric bike'
 - 369,356 rows have no start station ids, of those 369,331 rows have no start station names 
 - 409,615 rows have no end station ids, of those 409,154 rows have no end station names
 - 9,288 rows have no end station id and no end station name and are NOT rideable_type 'electric_bike'
@@ -39,3 +38,5 @@
 
 --- New Files ---
 - Created jupyter notebook for Python analysis
+----
+***2021-09-12***

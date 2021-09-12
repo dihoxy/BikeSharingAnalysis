@@ -37,3 +37,17 @@ ORDER BY start_station_name;
 SELECT count(*) AS num_null_value
 FROM public.bike_trip_data
 WHERE bike_trip_data.[field_name] IS NULL;
+
+-- Querying the member status of electric_bike riders and seeing if there is any trend with null start ids
+SELECT rideable_type, (
+    SELECT count(*)
+    FROM bike_trip_data
+    WHERE member_casual = 'casual'
+    ) AS cnt_casual,(
+    SELECT count(*)
+    FROM bike_trip_data
+    WHERE member_casual = 'member'
+    ) AS cnt_member
+FROM bike_trip_data
+WHERE rideable_type = 'electric_bike' AND start_station_id IS NULL
+GROUP BY rideable_type
