@@ -8,6 +8,15 @@ CREATE TABLE public.bike_trip_data (
 	member_casual text
 
 );
+-- Create a table for 'stations'
+CREATE TABLE stations
+AS (
+    SELECT DISTINCT start_station_id, start_station_name, start_lat, start_lng
+FROM bike_trip_data)
+;
+
+
+
 -- Since we are likely to use the start and end stations as filters for a lot
 -- of our queries, we will create an index to improve performance
 CREATE INDEX start_station_name_idx
