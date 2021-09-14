@@ -39,6 +39,5 @@
 --- New Files ---
 - Created jupyter notebook for Python analysis
 ----
-***2021-09-12***
-- Determined that table needs to be normalized to have a clearer picture of cleaning that needs to be done
-- Created table 'stations' that will house station id, name, and coordinates
+***2021-09-14***
+- Exported merged (uncleaned) dataset to a new csv 
