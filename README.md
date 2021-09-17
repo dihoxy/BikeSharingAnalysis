@@ -1,7 +1,7 @@
 ---
 # BikeSharingAnalysis
 ## By: *Anthony VanSlambrouck*
-## Date: *09/06/2021*
+## Date: *09/16/2021*
 ---
 # Google Data Analyitics Capstone Project
 
