@@ -11,4 +11,8 @@ Anthony VanSlambrouck
 - Indexes created on start and end station ids, trip duration, and weekday_name in *pgAdmin*
 
 ***Data Structure***
-- There are 5,910,407 rows in the dataset
+- There are 5,910,407 rows in the dataset (Before processing)
+- 369,956 null values in **start_station_id**
+- 369,331 null values in **start_station_id**
+- 409,615 null values in **end_station_name**
+- 6,904 null values in both **end_lat_nulls** and **end_lng_nulls**
