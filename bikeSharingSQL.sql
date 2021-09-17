@@ -12,14 +12,6 @@ UPDATE public.bike_trip_data
 SET trip_dur = age(ended_at, started_at)
 ;
 
--- Weekday
-ALTER TABLE public.bike_trip_data
-    DROP COLUMN weekday;
-ALTER TABLE public.bike_trip_data
-    ADD COLUMN weekday int;
-UPDATE bike_trip_data
-    SET weekday = EXTRACT(dow FROM started_at)
-;
 
 
 -- Create a table for 'stations'
@@ -54,6 +46,81 @@ FROM public.bike_trip_data
 WHERE bike_trip_data.[field_name] IS NULL;
 
 
+
+-- Querying the nulls of each field
+-- Created a temp table so that I can query and see the number of null values per field at once
+WITH null_counts AS (
+    SELECT (
+               SELECT count(*)
+               FROM bike_trip_data
+               WHERE rideable_type IS NULL
+           ) AS null_ride_types,
+           (
+               SELECT count(*)
+               FROM bike_trip_data
+               WHERE started_at IS NULL)
+             AS start_times_nulls,
+           (
+               SELECT count(*)
+               FROM bike_trip_data
+               WHERE ended_at IS NULL)
+             AS end_times_nulls,
+           (
+               SELECT count(*)
+               FROM bike_trip_data
+               WHERE start_station_id IS NULL)
+             AS start_station_id_nulls,
+           (
+               SELECT count(*)
+               FROM bike_trip_data
+               WHERE start_station_name IS NULL)
+             AS start_station_name_nulls,
+           (
+               SELECT count(*)
+               FROM bike_trip_data
+               WHERE end_station_id IS NULL)
+             AS end_station_id_null,
+           (
+               SELECT count(*)
+               FROM bike_trip_data
+               WHERE end_station_name IS NULL)
+             AS end_station_name_nulls,
+           (
+               SELECT count(*)
+               FROM bike_trip_data
+               WHERE start_lat IS NULL)
+             AS start_lat_nulls,
+           (
+               SELECT count(*)
+               FROM bike_trip_data
+               WHERE start_lng IS NULL)
+             AS start_lng_nulls,
+           (
+               SELECT count(*)
+               FROM bike_trip_data
+               WHERE end_lat IS NULL)
+             AS end_lat_nulls,
+           (
+               SELECT count(*)
+               FROM bike_trip_data
+               WHERE end_lng IS NULL)
+             AS end_lng_nulls,
+           (
+               SELECT count(*)
+               FROM bike_trip_data
+               WHERE weekday IS NULL)
+             AS week_day_nulls,
+           (
+               SELECT count(*)
+               FROM bike_trip_data
+               WHERE weekday_name IS NULL)
+             AS weekday_name_nulls
+)
+SELECT *
+FROM null_counts
+
+
+
 -- Querying the member status of electric_bike riders and seeing if there is any trend with null start ids
 SELECT rideable_type, (
     SELECT count(*)
@@ -71,12 +138,18 @@ GROUP BY rideable_type
 
 -- DML --
 
--- Deleted all rows where start_id is null
-DELETE
-FROM bike_trip_data
-WHERE start_station_id IS NULL;
+-- Create a column for weekday names
+ALTER TABLE public.bike_trip_data
+    ADD COLUMN weekday_name varchar(15);
+UPDATE public.bike_trip_data
+    SET weekday_name = to_char(started_at, 'day');
 
--- Updated 1 missing row where start_station_name was null
+
+-- Weekday num
+ALTER TABLE public.bike_trip_data
+    DROP COLUMN weekday;
+ALTER TABLE public.bike_trip_data
+    ADD COLUMN weekday int;
 UPDATE bike_trip_data
-SET start_station_name = 'Wood St & Milwaukee Ave'
-WHERE ride_id = '176105D1F8A1216B';
+    SET weekday = EXTRACT(dow FROM started_at)
+;
